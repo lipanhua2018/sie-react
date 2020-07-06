@@ -8,8 +8,8 @@ export default {
             childMenu: [
                 {key: '001', name: '报修人', path: '/RepairPerson'},
                 {key: '002', name: '结算单', path: '/Settlement'},
-                {key: '003', name: '故障信息', path: '/'},
-                {key: '004', name: '业务跟进', path: '/'},
+                {key: '003', name: '故障信息', path: '/Guzhang'},
+                {key: '004', name: '业务跟进', path: '/Yewu'},
             ]
         },
         {
@@ -18,7 +18,7 @@ export default {
             title: '订单管理',
             iconType: 'laptop',
             childMenu: [
-                {key: '005', name: '新增订单', path: '/'},
+                {key: '005', name: '新增订单', path: '/Addorder'},
                 {key: '006', name: '已退订单', path: '/'},
                 {key: '007', name: '故障订单', path: '/'},
                 {key: '008', name: '结算订单', path: '/'},

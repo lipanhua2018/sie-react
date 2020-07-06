@@ -141,8 +141,12 @@ class Settlement extends Component {
         this.setState({rowData});
     }
     rowKey = () => {
+        let n = this.state.n;
         let result = (()=>{
-            return (this.state.n++)+'A';
+            // return (this.state.n++)+'A';
+            return this.setState({
+                n: (n++)+'A'
+            })
         })();
         return result;
     }

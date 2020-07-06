@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
-import {Form, Row, Col, Input, Card, Icon, Table, Tooltip, Modal, notification} from 'antd';
+import {Form, Row, Col, Input, Card, Icon} from 'antd';
 import './DetailsPage.less';
 
 const formItemLayout = {
@@ -40,25 +40,25 @@ class DetailsPage extends Component{
                 <Row gutter={16}>
                         <Col className="gutter-row" span={6}>
                         <Form.Item label={`姓名`} {...formItemLayout}>
-                            <Input placeholder="placeholder" value={params.repairName}/>
+                            <Input placeholder="placeholder" defaultValue={params.repairName}/>
                         </Form.Item>
                         </Col>
 
                         <Col className="gutter-row" span={6}>
                         <Form.Item label={`电话`} {...formItemLayout}>
-                            <Input placeholder="placeholder" value={params.repairTel}/>
+                            <Input placeholder="placeholder" defaultValue={params.repairTel}/>
                         </Form.Item>
                         </Col>
 
                         <Col className="gutter-row" span={6}>
                         <Form.Item label={`编码`} {...formItemLayout}>
-                            <Input placeholder="placeholder" value={params.repairCode}/>
+                            <Input placeholder="placeholder" defaultValue={params.repairCode}/>
                         </Form.Item>
                         </Col>
 
                         <Col className="gutter-row" span={6}>
                         <Form.Item label={`单位`} {...formItemLayout}>
-                            <Input placeholder="placeholder" value={params.repairUnit}/>
+                            <Input placeholder="placeholder" defaultValue={params.repairUnit}/>
                         </Form.Item>
                         </Col>
                 </Row>

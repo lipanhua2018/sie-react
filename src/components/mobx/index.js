@@ -1,5 +1,7 @@
 import {observable} from 'mobx';
 
-var appState = observable({
-    timer: 0
-});
+class Todo {
+    id = Math.random();
+    @observable title = "";
+    @observable finished = false;
+}

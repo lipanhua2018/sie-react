@@ -53,7 +53,7 @@ class RepairPerson extends Component {
         
     }
 
-    getLineBnts = (text, record) => {
+    getLineBnts = (text, record) => {      
         const authBtns = [{jsEvent: 'handleEdit', btnCode: 'editCode', btnName: '编辑', btnIcon: 'edit'}, 
         {jsEvent: 'handleDelete', btnCode: 'deleteCode', btnName: '删除', btnIcon: 'delete'}]
         return authBtns.map(btn => {
@@ -68,6 +68,7 @@ class RepairPerson extends Component {
         this.showModal('编辑', data);
     }
     handleDelete = (text, record) => {  // 单行删除
+        // console.log('点击删除 ---> RepairPerson -72', text, record);
         const dataSource = [...this.state.dataSource];
         const self = this;
         confirm({
@@ -181,14 +182,15 @@ class RepairPerson extends Component {
         });
     }
     rowKey = () => {
+        let n = 0;
         let result = (()=>{
-            return (this.state.n++)+'B';
+            return (n++)+'B';
         })();
         return result;
     }
     render () {
         const { getFieldDecorator } = this.props.form;
-        // console.log(getFieldDecorator, 187, this.props)
+        // console.log(getFieldDecorator, 193, this.props, setFieldsValue)
         const {selectedRowKeys, dataSource} = this.state;
         const rowSelection = {
             onChange: (selectedRowKeys, selectedRows) => {  // onChange用来获取选中的数据和初始化掉已选过的数据           

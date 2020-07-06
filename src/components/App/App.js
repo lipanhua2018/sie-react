@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom
 import RepairPerson from '../pages/RepairPerson/RepairPerson';
 import Settlement from '../pages/Settlement/Settlement';
 import DetailsPage from '../pages/DetailsPage/DetailsPage';
+import Guzhang from '../pages/Guzhang/Guzhang';
+import Yewu from '../pages/Yewu/Yewu';
+import Addorder from '../pages/Addorder/Addorder';
 import {Layout, Menu, Breadcrumb, Icon, notification} from 'antd';
 import AppData from './data';
 import './App.less';
@@ -102,6 +105,9 @@ class App extends Component {
                 <Route exact path= '/RepairPerson' component = {RepairPerson}></Route>
                 <Route exact path= '/Settlement' component = {Settlement}></Route>
                 <Route exact path= '/DetailsPage' component = {DetailsPage}></Route>
+                <Route exact path= '/Guzhang' component = {Guzhang}></Route>
+                <Route exact path= '/Yewu' component = {Yewu}></Route>
+                <Route exact path= '/Addorder' component = {Addorder}></Route>
             </Switch>
             </Content>
             </Layout>
